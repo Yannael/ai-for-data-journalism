@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>blogpost</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0"><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&amp;t=5s">1) Our Next-Generation Model: Gemini 1.5</a></h1>
+
+<p>The model delivers dramatically enhanced performance, with a breakthrough in long-context understanding across modalities.</p>
+
+<p><img src="00065.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=65s">Link to video</a></p>
+
+<p>Key highlights of Gemini 1.5:</p>
+
+<ul>
+<li><p>Dramatically enhanced performance compared to previous models</p></li>
+<li><p>Breakthrough in long-context understanding across different modalities</p></li>
+<li><p>Announced by Sundar Pichai (CEO of Google and Alphabet) and Demis Hassabis (CEO of DeepMind) on Feb 15, 2024</p></li>
+</ul>
+
+<p>The focus is on what can be done with AI tools right now, in the present moment, rather than speculating about future capabilities. March 2023 has seen rapid advancements, with many new things becoming possible in just the past 7 weeks that weren&#39;t achievable before.</p>
+
+<h1 id="toc_1"><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&amp;t=67s">2) Google&#39;s Gemini 1.5 Model Handles Video Content</a></h1>
+
+<p>Google has released their Gemini 1.5 model, which is capable of absorbing a huge amount of content. It boasts five times the context length for input compared to Claude and is significantly larger than GPT-4. One of the most exciting features of Gemini 1.5 is its claimed ability to handle video.</p>
+
+<h2 id="toc_2">Experimenting with Gemini 1.5&#39;s Video Capabilities</h2>
+
+<p>To test Gemini 1.5&#39;s video handling, an experiment was conducted by providing a 7-second video panning along a bookshelf. The model was then prompted to generate a JSON array of the books in the video, including the title and author keys.</p>
+
+<p><img src="00187.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=187s">Link to video</a></p>
+
+<p>Impressively, Gemini 1.5 returned a JSON array with the titles and authors of the books on the bookshelf, despite the authors not being visible in the video. The model likely inferred the authors based on the context of the surrounding books related to web design. However, it did hallucinate one book that was not actually present on the shelf, which is not surprising given the nature of this technology.</p>
+
+<h2 id="toc_3">Limitations and Illusions</h2>
+
+<p>While Gemini 1.5&#39;s video handling capabilities are impressive, it&#39;s important to note that it&#39;s not entirely genuine. The model actually slices the video into one frame per second and treats them as individual images. This was discovered through the API documentation, which provides an FFmpeg command to prepare videos for use with the API.</p>
+
+<p>Despite these limitations, the ability to feed an hour&#39;s worth of one-second frame videos and obtain useful results is still a significant advancement. However, there are some challenges, such as the loss of audio and the potential for the transcript to become out of sync with the video.</p>
+
+<h2 id="toc_4">Exciting Progress</h2>
+
+<p>Seven weeks ago, this kind of video handling was not possible, but today it is. While there are still some sharp edges to navigate, the progress made in such a short time is truly exciting. The potential applications for this technology are vast, and it will be fascinating to see how it continues to evolve and improve in the future.</p>
+
+<h1 id="toc_5"><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&amp;t=230s">3) Anthropic&#39;s Claude 3 Surpasses OpenAI&#39;s GPT-4</a></h1>
+
+<p>In a surprising development, Anthropic&#39;s Claude 3 model has surpassed OpenAI&#39;s GPT-4 in performance on the ChatBot Arena leaderboard. This leaderboard is based on over 470,000 human preference votes comparing the outputs of various language models.</p>
+
+<p><img src="00290.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=290s">Link to video</a></p>
+
+<p>Anthropic, a company founded by former OpenAI researchers, has been quietly working on their own language models with a focus on ethics and safety. The release of Claude 3 marks the first time a model has outperformed GPT-4 on this benchmark.</p>
+
+<h2 id="toc_6">Claude 3 Haiku: Combining Language and Vision</h2>
+
+<p>Anthropic followed up the success of Claude 3 Opus with Claude 3 Haiku, a model that is not only cheaper and more capable than OpenAI&#39;s offerings, but also has the ability to generate haikus based on images.</p>
+
+<p><img src="00470.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=470s">Link to video</a></p>
+
+<p>This opens up exciting possibilities for combining language and vision in novel applications. The presenter demonstrates a simple app that captures an image from a camera and generates a haiku based on the contents, all at a fraction of the cost of using OpenAI&#39;s models.</p>
+
+<h2 id="toc_7">The Future of Language Model Progress</h2>
+
+<p>Despite the impressive progress from Anthropic and the open-source community, OpenAI is unlikely to relinquish their position as the leader in language model performance for long. As one of their researchers tweeted:</p>
+
+<blockquote>
+<p>Hope you enjoyed some time to relax this this will have been the slowest 12 months of a progress for quite some time to come</p>
+</blockquote>
+
+<p>The rapid pace of progress in this field shows no signs of slowing down, and the competition between major players like OpenAI and Anthropic, as well as the open-source community, is likely to drive even more impressive breakthroughs in the near future.</p>
+
+<h1 id="toc_8"><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&amp;t=563s">4) Exploring Language Model Pricing and Enriching Property Tax Data</a></h1>
+
+<p><img src="00803.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=803s">Link to video</a></p>
+
+<p>I searched the internet for an extremely basic at-a-glance comparison of pricing across various Large Language Models (LLMs) and I didn&#39;t find what I wanted, so I made one. I hope this helps someone like it helped me.</p>
+
+<p>I copied and pasted the data from a Google Sheet into my dataset software. I had to adjust the schema to use floating point numbers so I could sort by price. This revealed that Google&#39;s Gemini model is currently the cheapest, being offered for free (with the caveat that prompts and responses may be used to improve the product).</p>
+
+<p>I then used a new feature I built called &quot;query this table with AI assistance&quot;. I asked it to calculate the cost for each model for 10,000 input tokens and 500 output tokens. The software generated the appropriate SQL query, which included helpful comments. This transparency is important so that journalists can apply fact-checking and peer review to the results, given the unreliability of AI systems.</p>
+
+<p>The query showed that for the imaginary 10,000 token scenario, Claude 3 would cost \(0.003 compared to \)0.33 for GPT-4, highlighting the significant price differences.</p>
+
+<h2 id="toc_9">Enriching Champaign County Property Tax Data</h2>
+
+<p><img src="01103.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=1103s">Link to video</a></p>
+
+<p>Inspired by a talk on the searchable Champaign County property tax database, I decided to enrich this data using my dataset software. </p>
+
+<p>I used a tool I wrote called shot-scraper to extract the JSON data from the visualization page. This gave me a 17MB JSON file with 76,000 rows of data.</p>
+
+<p>After uploading this to my dataset software, I set up a full text search index on the owner name column. This allows searching for specific names, like &quot;John&quot;, and sorting the results by total assessed value to find the wealthiest Johns.</p>
+
+<p>Next, I demonstrated data enrichment by geocoding the addresses. After filtering for records with an address, I used the OpenCage geocoder to add latitude and longitude columns. This allows mapping the data points.</p>
+
+<p>Finally, I showed how natural language queries can be used to ask questions of the data, like &quot;who is the richest home owner?&quot;. The software generates the appropriate SQL to answer the question.</p>
+
+<p>This demonstrates the power of rapidly ingesting, enriching, and querying data to gain insights and tell stories with it as journalists.</p>
+
+<h1 id="toc_10"><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&amp;t=1145s">5) Extracting Structured Data with Language Models</a></h1>
+
+<p>Language models are particularly useful for three key tasks when working with data:</p>
+
+<ol>
+<li><p>Extracting and structuring data from unstructured sources</p></li>
+<li><p>Enriching data with additional context and insights</p></li>
+<li><p>Assisting with data entry and cleaning</p></li>
+</ol>
+
+<p>One powerful example is extracting structured data from PDFs and images. By combining OCR techniques with large language models, we can pull out key information and organize it into a structured format.</p>
+
+<p>For instance, consider this scanned PDF document:</p>
+
+<p><img src="01505.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=1505s">Link to video</a></p>
+
+<p>Using a tool like <code>llm</code>, we can convert the PDF to an image and then extract the text using a model like <code>gpt-3.5-turbo</code>:</p>
+
+<div><pre><code class="language-bash">
+$ llm &#39;gpt-3.5-turbo&#39; order2.png &#39;extract text&#39;
+</code></pre></div>
+
+<p><img src="01385.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=1385s">Link to video</a></p>
+
+<p>The model does a decent job converting the scanned document into markdown text. It&#39;s important to spot check the output for any inaccuracies or hallucinations, but overall this is a promising approach.</p>
+
+<p>We can go even further and have the model extract the text into a structured database table. By providing a schema for the table and some example data, the model can intelligently parse the unstructured text:</p>
+
+<p><img src="01625.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=1625s">Link to video</a></p>
+
+<div><pre><code class="language-sql">
+CREATE TABLE events (
+
+  event_title TEXT,
+
+  event_date TEXT,
+
+  start_time TEXT,
+
+  end_time TEXT, 
+
+  description TEXT
+
+);
+</code></pre></div>
+
+<p><img src="01685.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=1685s">Link to video</a></p>
+
+<p>Pasting in raw text from a webpage about upcoming jazz shows, the model is able to populate the events table with structured data in the correct format. We can even have it generate human-friendly descriptions for each event.</p>
+
+<p>Finally, the same approach works on images as well. Dragging an image of an event flyer into the tool, it can extract the key details and add a new row to our events database.</p>
+
+<p><img src="01565.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=1565s">Link to video</a></p>
+
+<p>The potential applications are exciting - imagine automatically digitizing a pile of flyer photos into a structured events calendar!</p>
+
+<p>While these language model powered data extraction capabilities are impressive, it&#39;s still important to validate the output with spot checks. Think of it as a highly capable data entry assistant that still needs some human oversight.</p>
+
+<p>But the ability to rapidly digitize and structure data from PDFs, images, and unstructured text opens up a world of possibilities. Language models are quickly becoming an invaluable tool in the data practitioner&#39;s toolbox.</p>
+
+<h1 id="toc_11"><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&amp;t=1745s">6) Exploring the Power of ChatGPT Code Interpreter Mode</a></h1>
+
+<p>ChatGPT Code Interpreter Mode is a powerful tool that allows you to ask ChatGPT questions and receive answers in the form of executable code. This mode enables ChatGPT to write and run Python code, providing a wide range of capabilities.</p>
+
+<h2 id="toc_12">Factorial Example</h2>
+
+<p>Let&#39;s start with a simple example. We can ask ChatGPT to calculate the factorial of 14 using the code interpreter mode:</p>
+
+<p><img src="02105.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=2105s">Link to video</a></p>
+
+<p>ChatGPT not only provides the result but also shows the Python code it used to calculate the factorial. In this case, it imported the <code>math</code> module and called <code>math.factorial(14)</code>.</p>
+
+<h2 id="toc_13">Analyzing Data with ChatGPT</h2>
+
+<p>One of the most impressive features of ChatGPT Code Interpreter Mode is its ability to analyze data. By uploading a file, such as a CSV containing data, we can ask ChatGPT to provide insights and visualizations.</p>
+
+<p>For example, given a file called <code>calls_for_service_2024.csv</code>, we can ask ChatGPT to tell us interesting things about the data:</p>
+
+<p><img src="01925.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=1925s">Link to video</a></p>
+
+<p>ChatGPT imports the necessary libraries (like pandas), reads the file, and provides a summary of the data, including the variety of incident types and other observations.</p>
+
+<p>We can even ask ChatGPT to create specific visualizations, such as a chart showing the number of incidents involving shootings per week over time. ChatGPT will write the code to generate the requested chart, saving us the time and effort of remembering how to use libraries like pandas and charting tools.</p>
+
+<h2 id="toc_14">The Power of Tool Usage</h2>
+
+<p>ChatGPT Code Interpreter Mode is an example of tool usage, where the language model is granted access to additional capabilities that allow it to interact with the real world. By giving ChatGPT the ability to run Python code and access uploaded files, we unlock a vast array of possibilities.</p>
+
+<p>This tool usage is not limited to Python. With some clever prompting, ChatGPT can be coaxed into compiling C code, running JavaScript, and more. The potential applications are endless, and the ease with which these tools can be integrated into ChatGPT is truly remarkable.</p>
+
+<h2 id="toc_15">Conclusion</h2>
+
+<p>ChatGPT Code Interpreter Mode is a game-changer for anyone looking to leverage the power of language models for data analysis, visualization, and more. By granting ChatGPT access to tools like Python and uploaded files, we can unlock a world of possibilities and streamline our workflows in ways that were previously unimaginable.</p>
+
+<p>If you haven&#39;t already, I highly recommend spending some time exploring ChatGPT Code Interpreter Mode. The results will amaze you, and the potential applications are limited only by your imagination.</p>
+
+<h1 id="toc_16"><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&amp;t=2353s">7) Exploring the Potential of AI for Data Journalism</a></h1>
+
+<p><img src="02599.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=2599s">Link to video</a></p>
+
+<p>There are several ways to load data into Datasette Cloud:</p>
+
+<ul>
+<li><p>Upload CSV files</p></li>
+<li><p>Import data from a URL</p></li>
+<li><p>Use the Datasette Cloud API</p></li>
+</ul>
+
+<p>Or start by importing an example:</p>
+
+<ul>
+<li>The Global Power Point Database from WRI</li>
+</ul>
+
+<p>Let&#39;s have a conversation:</p>
+
+<p>I would love to talk to you one-on-one about how you might want to use Datasette Cloud, and ways the product can be improved.</p>
+
+<p>Book a 30-45 minute Zoom/Google Meet session at a time that works for you.</p>
+
+<h2 id="toc_17">Semantic Search with Text Embeddings</h2>
+
+<p><img src="02435.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=2435s">Link to video</a></p>
+
+<p>Find rows that are semantically close to your search query.</p>
+
+<p>Powered by Datasette Cloud</p>
+
+<p>The text embeddings feature allows you to query your data in powerful new ways. By calculating a &quot;magic number&quot; for each piece of text, it enables searching for similar content even if the keywords don&#39;t directly match.</p>
+
+<p>For example, searching for &quot;things that will upset politicians&quot; returns relevant sessions like &quot;unleashing the power of data to expose political influence operations&quot;, even though the keywords are different. This opens up exciting possibilities for journalists to uncover insights and connections in large datasets.</p>
+
+<h2 id="toc_18">Transcribing and Searching Meeting Videos</h2>
+
+<p><img src="02763.jpg"/></p>
+
+<p><a href="https://www.youtube.com/watch?v=BJxPKr6ixSM&t=2763s">Link to video</a></p>
+
+<p>We&#39;ve been building a feature in Datasette Cloud called &quot;Datasette Scribe&quot;. It allows you to grab a long YouTube video, like a 2-hour city council meeting, and automatically generate a searchable transcript.</p>
+
+<p>The tool uses Whisper, a high-quality open source speech recognition model that supports transcription and translation for 91 languages. </p>
+
+<p>Here&#39;s an example of a transcribed Huntington Beach Council meeting. You can see:</p>
+
+<ul>
+<li><p>The YouTube video alongside the transcript</p></li>
+<li><p>A visualization of who spoke when </p></li>
+<li><p>A chart of speaking time per person</p></li>
+<li><p>The ability to search across all meetings in the collection</p></li>
+</ul>
+
+<p>Since the data is stored in database tables, you can run SQL queries, export to CSV/JSON, and integrate with other tools.</p>
+
+<p>The next step is to add summarization - extracting key newsworthy points, detecting disagreements, identifying major themes and pulling illustrative quotes. This enables efficient fact-checking and analysis of large amounts of recorded content.</p>
+
+<h2 id="toc_19">Conclusion</h2>
+
+<p>The demos shown today highlight the exciting potential of AI to supercharge data journalism. From semantic search to automated transcription to data extraction and summarization, these are powerful tools we can start using and building with right now.</p>
+
+<p>Importantly, the value lies not in generating fake text or images, but in augmenting and accelerating the journalistic process - finding needles in haystacks, structuring messy data, and surfacing the most salient information.</p>
+
+<p>As we explore this fast-moving space, establishing best practices around fact-checking, spot-checking, and thoughtful application will be key. The goal is to harness these innovations to further the mission of uncovering truth and informing the public.</p>
+
+
+
+<script type="text/x-mathjax-config">
+(function () {
+
+MathJax.Hub.Config({
+	'showProcessingMessages': false,
+	'messageStyle': 'none'
+});
+
+if (typeof MathJaxListener !== 'undefined') {
+	MathJax.Hub.Register.StartupHook('End', function () {
+		MathJaxListener.invokeCallbackForKey_('End');
+	});
+}
+
+})();
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</body>
+
+</html>
